@@ -15,7 +15,7 @@ html {
   top: -5vw;
   left: -7vw;
   font-weight: 600;
-  z-index: -1;
+  z-index: 0;
 }
 
 h2 {
@@ -25,6 +25,7 @@ h2 {
       align-self: flex-start;
   margin-left: 12.2vw;
   margin-top: 20vh;
+  z-index: 1;
 }
 
 .welcome {
@@ -148,6 +149,7 @@ h2 {
   font-weight: 300;
   margin-top: 2vh;
   margin-right: 3vw;
+  z-index: 1;
 }
 
 .about .wont-fail {
@@ -171,22 +173,6 @@ h2 {
           transform: scale(0.8);
 }
 
-.about .click-arrow {
-  width: 4vw;
-  margin-left: 23vw;
-  margin-top: 2vw;
-}
-
-.about .click-vibe {
-  font-size: 1vw;
-  font-weight: 600;
-  text-align: center;
-  -webkit-transform: rotate(-20deg);
-          transform: rotate(-20deg);
-  margin-left: 37vw;
-  margin-top: -2.8vw;
-}
-
 .experience {
   height: 120vh;
   position: relative;
@@ -204,13 +190,11 @@ h2 {
   color: #616161;
   font-style: italic;
   background-color: #fafafa;
-  z-index: -2;
   overflow-x: hidden;
 }
 
 .experience .bg {
   color: rgba(255, 255, 255, 0.75);
-  z-index: -1;
 }
 
 .experience .experience-grid {
@@ -224,6 +208,7 @@ h2 {
   width: 74.4vw;
   margin-top: 8.5vh;
   margin-bottom: 10vh;
+  z-index: 1;
 }
 
 .experience .xp-card {
@@ -304,6 +289,7 @@ h2 {
   font-style: normal;
   font-weight: 500;
   color: #979797;
+  z-index: 1;
 }
 
 .experience .xp-btn {
@@ -316,6 +302,79 @@ h2 {
   font-family: 'Montserrat', sans-serif;
   color: white;
   background-color: #20B7C9;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.modal-det {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  z-index: 3;
+}
+
+.modal-det .modal-content {
+  margin-top: 4%;
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  border-radius: 0.8vh;
+  position: relative;
+  padding: 5vh 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-det .modal-content i {
+  font-size: 3.5vh;
+  position: absolute;
+  top: 3.2vh;
+  right: 4vh;
+  color: #12737e;
+  cursor: pointer;
+}
+
+.modal-det .modal-content .exp-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (19vh)[3];
+      grid-template-rows: repeat(3, 19vh);
+  grid-auto-flow: column;
+  -webkit-column-gap: 5vw;
+          column-gap: 5vw;
+  row-gap: 3vh;
+}
+
+.modal-det .modal-content .exp-container .exp-info {
+  margin: auto 0px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.83vw;
+}
+
+.modal-det .modal-content .exp-container .exp-info .exp-name {
+  margin-bottom: 2vh;
+  font-size: 0.95vw;
+  font-weight: 600;
+  color: #12737e;
 }
 
 .work {
@@ -680,7 +739,7 @@ h2 {
     width: 0%;
   }
   to {
-    width: 67%;
+    width: 73%;
   }
 }
 
@@ -689,7 +748,7 @@ h2 {
     width: 0%;
   }
   to {
-    width: 67%;
+    width: 73%;
   }
 }
 

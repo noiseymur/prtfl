@@ -150,8 +150,6 @@ selectATrack(songList);
 
 workList = document.querySelectorAll('.mywork');
 
-console.log(workList);
-
 
 function workGrow() {
     workList.forEach((element,index) => {
@@ -161,7 +159,6 @@ function workGrow() {
             let newone = element;
             let elementCopy = newone.cloneNode(true);
             element.parentElement.insertBefore(elementCopy,element);
-            console.log(elementCopy);
 
             elementCopy.classList.remove('mywork');
             elementCopy.className += ` wrk-${(index+1)}`;
@@ -199,3 +196,22 @@ function workGrow() {
 }
 
 workGrow();
+
+
+// Toggling detailed experience information
+
+let closeButton = document.querySelector('.btn-close');
+let xpButton = document.querySelector('.xp-btn');
+let modalBox = document.querySelector('.modal-det');
+
+function modalToggle() {
+    closeButton.addEventListener('click',()=>{
+        modalBox.style.display = 'none';
+    });
+    
+    xpButton.addEventListener('click',()=>{
+        modalBox.style.display = 'flex';
+    });
+}
+
+modalToggle();
