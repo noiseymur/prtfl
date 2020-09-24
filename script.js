@@ -39,6 +39,7 @@ function stickyHeader() {
     if(window.pageYOffset>stickOffset){
         welcome.classList.add('sticky');
         menuIcon.classList.add('i-flip');
+        console.log(welcome.classList);
     }
     else {
         welcome.classList.remove('sticky');
@@ -178,8 +179,6 @@ reactCat = document.querySelector('#react-cat');
 showCat = document.querySelector('#show-cat');
 toolCat = document.querySelector('#tool-cat');
 gameCat = document.querySelector('#game-cat');
-
-console.log(reactCat);
 
 function filterWorks () {
     allCat.addEventListener('click',()=>{
@@ -336,8 +335,6 @@ modalToggle();
 
 
 menuBtn = document.querySelector('.menu-button');
-
-header = document.querySelector('header');
 
 navButtons = document.querySelectorAll('.nav-btn');
 
