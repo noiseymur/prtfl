@@ -22,11 +22,28 @@
                 </div>
             </div>
             <header>
-                <a href="#abt"><p>About</p></a>
-                <a href="#exp"><p>Experience</p></a>
-                <a href="#work"><p>Work</p></a>
-                <a href="#"><p>Contact</p></a>
-                <a href="#"><p>Socials</p></a>
+                <a class="nav-btn" href="#abt"><p>About</p></a>
+                <a class="nav-btn" href="#exp"><p>Experience</p></a>
+                <a class="nav-btn" href="#work"><p>Work</p></a>
+                <a class="nav-btn" href="#contact"><p>Contact</p></a>
+                <a class="socials-btn"><p>Socials</p></a>
+                <div class="js-socials">
+                    <a href="https://www.facebook.com/noiseymur" target="blank"><div class="social fb">
+                        <img src="./img/fb.png" alt="">
+                    </div></a>
+                    <a href="https://www.instagram.com/noiseymur" target="blank"><div class="social insta">
+                        <img src="./img/insta.png" alt="">
+                    </div></a>
+                    <a href="https://www.github.com/noiseymur" target="blank"><div class="social git">
+                        <img src="./img/git.png" alt="">
+                    </div></a>
+                </div>
+                <div class="menu-button">
+                    <i class="fas fa-chevron-up"></i>
+                    <p>Menu</p>
+                </div>
+                <i class="fas fa-times btn-close-menu"></i>
+
             </header>
         </section>
 
@@ -183,7 +200,7 @@
                     </div>
                     <div class="exp-info">
                         <p class="exp-name">React</p>
-                        <p class="exp-des">React has been very popular JS library lately, 
+                        <p class="exp-des">React has been a very popular JS library lately, 
                             which allows us to build faster single-page web applications by 
                             creating virtual DOM to prevent unnecessary renderings. My React 
                             knowledge includes creating reusable class and functional components, 
@@ -211,19 +228,19 @@
             </div>
         </div>
 
-        <section class="work">
+        <section class="work" id="work">
             <p class="bg">Work</p>
             <h2>Work</h2>
             <div class="categories">
-                <a href="#">All</a>
-                <a href="#">React Apps</a>
-                <a href="#">Showcases</a>
-                <a href="#">Tools</a>
-                <a href="#">Games</a>
+                <p class="cat-1" id="all-cat">All</p>
+                <p class="cat-1" id="react-cat">React Apps</p>
+                <p class="cat-1" id="show-cat">Showcases</p>
+                <p class="cat-1" id="tool-cat">Tools</p>
+                <p class="cat-1" id="game-cat">Games</p>
             </div>
 
             <div class="works">
-                <div class="mywork wrk-1">
+                <div class="mywork active wrk-1" id="react">
                     <div class="w-info">
                         <h3 class="w-name">Weather Forecast App</h3>
                         <p class="w-description">Simple app which automatically shows 
@@ -238,7 +255,7 @@
                         <img src="./img/weatherfc1.PNG" alt="">
                     </div>
                 </div>
-                <div class="mywork wrk-2">
+                <div class="mywork wrk-2" id="tool">
                     <div class="w-info">
                         <h3 class="w-name">To Do List</h3>
                         <p class="w-description">The best to do list ever made. Conquer your day by 
@@ -252,7 +269,7 @@
                         <img src="./img/Todolist1.PNG" alt="">
                     </div>
                 </div>
-                <div class="mywork wrk-3">
+                <div class="mywork wrk-3" id="react">
                     <div class="w-info">
                         <h3 class="w-name">Nike</h3>
                         <p class="w-description">Landing page concept for well-known sports shoe 
@@ -266,7 +283,7 @@
                         <img src="./img/Nike1.PNG" alt="">
                     </div>
                 </div>
-                <div class="mywork wrk-4">
+                <div class="mywork wrk-4" id="show">
                     <div class="w-info">
                         <h3 class="w-name">AppLab</h3>
                         <p class="w-description">Simple and responsive website for your tech company
@@ -280,8 +297,64 @@
                     </div>
                 </div>
             </div>
+
+            <p>Companies I've worked with</p>
+            <div class="divider-hr"></div>
+            <p>Well... Yours can be the first</p>
         </section>
     </div>
+
+    <section class="contact" id="contact">
+        <p class="bg">Contact</p>
+        <h2>Contact</h2>
+        <div class="both-sides">
+            <div class="c-left">
+                <p class="question">
+                    Want to hire or ask something?<br>
+                    Maybe you just need someone to talk to?
+                </p>
+                <p class="cta-text">
+                    Just Call Me
+                </p>
+                <a href="tel:+994557112284">+994 55 711 22 84</a>
+                <a href="tel:+994777112284">+994 77 711 22 84</a>
+                <p class="cta-text">
+                    Or Send an Email
+                </p>
+                <a href="mailto:noiseymur@hotmail.com">noiseymur@hotmail.com</a>
+            </div>
+            <div class="c-right">
+                <p>Find me on social media</p>
+                <a href="https://www.facebook.com/noiseymur">
+                <div class="social-box">
+                    <div class="icon i-fb">
+                    </div>
+                    <div class="text fb">
+                        <p>/noiseymur</p>
+                    </div>
+                </div>
+                </a>
+                <a href="https://www.instagram.com/noiseymur">
+                <div class="social-box">
+                    <div class="icon i-insta">
+                    </div>
+                    <div class="text insta">
+                        <p>/noiseymur</p>
+                    </div>
+                </div>
+                </a>
+                <a href="https://www.github.com/noiseymur">
+                <div class="social-box">
+                    <div class="icon i-git">
+                    </div>
+                    <div class="text git">
+                        <p>/noiseymur</p>
+                    </div>
+                </div>
+                </a>
+            </div>
+        </div>
+    </section>
 
     <script src="script.js"></script>
 </body>

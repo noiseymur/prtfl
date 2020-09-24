@@ -33,14 +33,36 @@ let welcome = document.querySelector('.welcome');
 let header = document.querySelector('header');
 let stickOffset = header.offsetTop;
 
+let menuIcon = document.querySelector('.fa-chevron-up');
+
 function stickyHeader() {
     if(window.pageYOffset>stickOffset){
         welcome.classList.add('sticky');
+        menuIcon.classList.add('i-flip');
     }
     else {
         welcome.classList.remove('sticky');
+        menuIcon.classList.remove('i-flip');
     }
 }
+
+// Socials toggle
+
+let socialsButton = document.querySelector('.socials-btn');
+let socials = document.querySelector('.js-socials');
+
+function toggleSocials() {
+    socialsButton.addEventListener('mouseover',()=>{
+        socialsButton.style.opacity = '0%';
+        socials.style.display = 'flex';
+        socials.addEventListener('mouseleave',()=>{
+            socials.style.display = 'none';
+            socialsButton.style.opacity = '100%';
+        })
+    })
+}
+
+toggleSocials();
 
 let stopRepeat = true;
 
@@ -147,56 +169,152 @@ function changeSong (array) {
 
 selectATrack(songList);
 
+workList1 = document.querySelectorAll('.mywork');
+workList = workList1;
+works = document.querySelector('.works');
 
-workList = document.querySelectorAll('.mywork');
+allCat = document.querySelector('#all-cat');
+reactCat = document.querySelector('#react-cat');
+showCat = document.querySelector('#show-cat');
+toolCat = document.querySelector('#tool-cat');
+gameCat = document.querySelector('#game-cat');
 
+console.log(reactCat);
 
-function workGrow() {
-    workList.forEach((element,index) => {
+function filterWorks () {
+    allCat.addEventListener('click',()=>{
+        workList = workList1;
+        workList1.forEach(element=>{
+            element.style.display = 'flex';
+        });
+    })
 
-        element.addEventListener('mouseover',()=>{
-
-            let newone = element;
-            let elementCopy = newone.cloneNode(true);
-            element.parentElement.insertBefore(elementCopy,element);
-
-            elementCopy.classList.remove('mywork');
-            elementCopy.className += ` wrk-${(index+1)}`;
-            elementCopy.style.position = 'absolute';
-            elementCopy.style.zIndex = '20';
-
-            if(index%2===0){
-                if(index!==0){
-                    elementCopy.style.top = `${(index-1)*41}vh`;
-                }
+    reactCat.addEventListener('click',()=>{
+        workList = Array.from(workList1).filter(element =>{
+            return element.id === 'react';
+        });
+        console.log(workList);
+        workList1.forEach(element=>{
+            if(element.id==='react'){
+                element.style.display = 'flex';
+                console.log(element);
             }
             else{
-                elementCopy.style.right = '0vw';
-                elementCopy.style.flexFlow = 'row-reverse';
-                if(index!==1){
-                    elementCopy.style.top = `${(index-2)*41}vh`;
-                }
+                element.style.display = 'none';
             }
-            element.parentElement.appendChild(elementCopy);
-            elementCopy.className += ' elcopy';
-            elementCopy.style.width = '68vw';
+        });
+    })
 
-            elementCopy.addEventListener('mouseleave',()=>{
-                elementCopy.classList.add('leavin');
-                setTimeout(() => {
-                    elementCopy.style.width = '37vw';
+    showCat.addEventListener('click',()=>{
+        workList = Array.from(workList1).filter(element=>{
+            return element.id === 'show';
+        });
+        workList1.forEach(element=>{
+            if(element.id==='show'){
+                element.style.display = 'flex';
+            }
+            else{
+                element.style.display = 'none';
+            }
+        });
+    })
+
+    toolCat.addEventListener('click',()=>{
+        workList = Array.from(workList1).filter(element=>{
+            return element.id === 'tool';
+        });
+        workList1.forEach(element=>{
+            if(element.id==='tool'){
+                element.style.display = 'flex';
+            }
+            else{
+                element.style.display = 'none';
+            }
+        });
+    })
+
+    gameCat.addEventListener('click',()=>{
+        workList = Array.from(workList1).filter(element=>{
+            return element.id === 'game';
+        });
+        workList1.forEach(element=>{
+            if(element.id==='game'){
+                element.style.display = 'flex';
+            }
+            else{
+                element.style.display = 'none';
+            }
+        });
+    })
+}
+
+filterWorks();
+
+
+
+function workGrow(workList) {
+
+    workList.forEach((element,index) => {
+        element.addEventListener('mouseover',()=>{
+            let screenSize = window.innerWidth;
+            if(screenSize>1150){
+                let newone = element;
+                let elementCopy = newone.cloneNode(true);
+                element.parentElement.insertBefore(elementCopy,element);
+                elementCopy.classList.remove('mywork');
+                elementCopy.style.position = 'absolute';
+                elementCopy.style.zIndex = '20';
+                if(element.offsetLeft===0){
+                    elementCopy.style.top = `${element.offsetTop}px`;
+                }
+                else{
+                    elementCopy.style.right = '0vw';
+                    elementCopy.style.flexFlow = 'row-reverse';
+                    elementCopy.style.top = `${element.offsetTop}px`;
+                }
+                element.parentElement.appendChild(elementCopy);
+                elementCopy.className += ' elcopy';
+                elementCopy.style.width = '68vw';
+                elementCopy.addEventListener('mouseleave',()=>{
+                    elementCopy.classList.add('leavin');
                     setTimeout(() => {
-                        elementCopy.parentElement.removeChild(elementCopy);
-                    }, 400);         
-                }, 400);
-            })
+                        elementCopy.style.width = '36vw';
+                        setTimeout(() => {
+                            elementCopy.parentElement.removeChild(elementCopy);
+                        }, 400);         
+                    }, 400);
+                })
+            }
+            else{
+                element.classList.add('card-active');
+                element.addEventListener('mouseleave',()=>{
+                    element.classList.add('leavin-mob');
+                    
+                    setTimeout(() => {
+                        element.classList.remove('card-active');
+                        element.classList.remove('leavin-mob');
+                    }, 800);
+                })
+            }
         })
         
     });
+    
 }
 
-workGrow();
+workGrow(workList);
 
+// function workExpand(x) {
+//     if(x.matches){
+
+//         workList.forEach((element,index) => {
+
+//             element.addEventListener('mouseover',()=>{
+//             });
+            
+//         });
+//     }
+// }
 
 // Toggling detailed experience information
 
@@ -215,3 +333,48 @@ function modalToggle() {
 }
 
 modalToggle();
+
+
+menuBtn = document.querySelector('.menu-button');
+
+header = document.querySelector('header');
+
+navButtons = document.querySelectorAll('.nav-btn');
+
+socialsBar = document.querySelector('.js-socials');
+
+console.log(navButtons);
+
+menuCloseBtn = document.querySelector('.btn-close-menu');
+
+menuBtn.addEventListener('click',()=>{
+    document.body.style.overflow = 'hidden';
+    menuBtn.style.display = 'none';
+    menuCloseBtn.style.display = 'block';
+    socialsBar.style.display = 'flex';
+    header.classList.add('header-menu');
+    navButtons.forEach(item=>{
+        item.style.display = 'block';
+        item.addEventListener('click',()=>{
+            document.body.style.overflow = 'scroll';
+            menuBtn.style.display = 'flex';
+            menuCloseBtn.style.display = 'none';
+            socialsBar.style.display = 'none';
+            header.classList.remove('header-menu');
+            navButtons.forEach(item=>{
+                item.style.display = 'none';
+            })
+        })
+    })
+})
+
+menuCloseBtn.addEventListener('click',()=>{
+    document.body.style.overflow = 'scroll';
+    menuBtn.style.display = 'flex';
+    menuCloseBtn.style.display = 'none';
+    socialsBar.style.display = 'none';
+    header.classList.remove('header-menu');
+    navButtons.forEach(item=>{
+        item.style.display = 'none';
+    })
+})
