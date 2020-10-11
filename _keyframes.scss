@@ -1,0 +1,338 @@
+@keyframes html-grow {
+    form {
+        width: 0%;
+    }
+
+    to {
+        width: 88%;
+    }
+}
+
+@keyframes css-grow {
+    form {
+        width: 0%;
+    }
+
+    to {
+        width: 73%;
+    }
+}
+
+@keyframes js-grow {
+    form {
+        width: 0%;
+    }
+
+    to {
+        width: 46%;
+    }
+}
+
+@keyframes react-grow {
+    form {
+        width: 0%;
+    }
+
+    to {
+        width: 51%;
+    }
+}
+
+@keyframes boots-grow {
+    form {
+        width: 0%;
+    }
+
+    to {
+        width: 60%;
+    }
+}
+
+@keyframes ui-grow {
+    form {
+        width: 0%;
+    }
+
+    to {
+        width: 45%;
+    }
+}
+
+@keyframes bg-pos {
+    0% {
+        background-position: right;
+    }
+
+    50% {
+        background-position: left;
+    }
+
+    100% {
+        background-position: right;
+    }
+}
+
+@keyframes elcopy-am {
+    from {
+        width: 37vw;
+    }
+
+    to {
+        width: 68vw;
+    }
+}
+
+
+
+@keyframes description-width {
+    0% {
+        width: 0vw;
+        height: 0vh;
+    }
+    25% {
+        width: 36vw;
+        height: 0vh;
+    }
+    75% {
+        width: 36vw;
+        height: auto;
+    }
+    100% {
+        width: 36vw;
+        height: auto;
+    }
+}
+
+@keyframes description-width-mobile {
+    0% {
+        height: 0vh;
+        opacity: 0%;
+    }
+    40% {
+        height: 0vh;
+        opacity: 0%;
+    }
+    80% {
+        height: auto;
+        opacity: 0%;
+    }
+    90% {
+        height: auto;
+        opacity: 100%;
+    }
+}
+
+@keyframes image-width {
+    0% {
+        width: 0vw;
+    }
+    50% {
+        width: 0vw;
+    }
+    100% {
+        width: 20vw;
+    }
+}
+
+@keyframes image-width-mobile {
+    0% {
+        height: 0vh;
+    }
+    50% {
+        height: 0vh;
+    }
+    100% {
+        height: 26vh;
+    }
+}
+
+@keyframes btn-height {
+    0% {
+        height: 0vh;
+        margin-top: 0vh;
+    }
+    50% {
+        height: 0vh;
+        margin-top: 0vh;
+    }
+    100% {
+        height: 4.1vh;
+        margin-top: 4vh;
+    }
+}
+
+@keyframes btn-height-mobile {
+    0% {
+        height: 0vh;
+        margin: 0vh 0vh 0vh;
+    }
+    50% {
+        height: 0vh;
+        margin: 0vh 0vh 0vh;
+    }
+    100% {
+        height: 4.1vh;
+        margin: 6vh 0vh 4vh;
+    }
+}
+
+@keyframes span-height {
+    0%{
+        opacity: 0%;
+    }
+    80% {
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+@keyframes name-margin {
+    0% {
+        margin-bottom: 0vh;
+        font-size: 3.5vh;
+    }
+    50% {
+        margin-bottom: 0vh;
+        font-size: 2.2vh;
+    }
+    100% {
+        margin-bottom: 2vh;
+        font-size: 2.2vh;
+    }
+}
+
+
+
+@keyframes description-width-rv {
+    0% {
+        width: 36vw;
+        height: 5vh;
+    }
+    25% {
+        width: 36vw;
+        height: 5vh;
+    }
+    75% {
+        width: 36vw;
+        height: 0vh;
+    }
+    100% {
+        width: 0vw;
+        height: 0vh;
+    }
+}
+
+@keyframes description-width-mobile-rv {
+    10% {
+        height: auto;
+        opacity: 100%;
+    }
+    20% {
+        height: auto;
+        opacity: 0%;
+    }
+    60% {
+        height: 0vh;
+        opacity: 0%;
+    }
+    100% {
+        height: ovh;
+        opacity: 0%;
+    }
+}
+
+@keyframes image-width-rv {
+    0% {
+        width: 20vw;
+    }
+    50% {
+        width: 0vw;
+    }
+    100% {
+        width: 0vw;
+    }
+}
+
+@keyframes image-width-mobile-rv {
+    0% {
+        height: 26vh;
+    }
+    50% {
+        height: 0vh;
+    }
+    100% {
+        height: 0vh;
+    }
+}
+
+@keyframes btn-height-rv {
+    0% {
+        height: 4.1vh;
+        margin-top: 4vh;
+    }
+    50% {
+        height: 0vh;
+        margin-top: 0vh;
+    }
+    100% {
+        height: 0vh;
+        margin-top: 0vh;
+    }
+}
+
+@keyframes btn-height-mobile-rv {
+    0% {
+        height: 4.1vh;
+        margin: 6vh 0vh 4vh;
+    }
+    50% {
+        height: 0vh;
+        margin: 0vh 0vh 0vh;
+    }
+    100% {
+        height: 0vh;
+        margin: 0vh 0vh 0vh;
+    }
+}
+
+@keyframes span-height-rv {
+    0%{
+        opacity: 100%;
+    }
+    15% {
+        opacity: 0%;
+    }
+    100%{
+        opacity: 0%;
+    }
+}
+
+@keyframes name-margin-rv {
+    0% {
+        margin-bottom: 2vh;
+        font-size: 2.2vh;
+    }
+    50% {
+        margin-bottom: 0vh;
+        font-size: 2.2vh;
+    }
+    100% {
+        margin-bottom: 0vh;
+        font-size: 3.5vh;
+    }
+}
+
+@keyframes get-short {
+    0% {
+        height: 76vh;
+    }
+
+    50%{
+        height: 76vh;
+    }
+    100% {
+        height: 38vh;
+    }
+}

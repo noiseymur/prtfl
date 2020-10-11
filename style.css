@@ -1449,6 +1449,10 @@ h2 {
   background: radial-gradient(#8258E3, #6041A8);
 }
 
+.work .works .wrk-5 {
+  background: radial-gradient(#cf7fb7, #a00071);
+}
+
 .work > p:nth-of-type(2) {
   margin-top: 15vh;
   margin-bottom: 3vh;

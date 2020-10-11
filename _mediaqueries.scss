@@ -1,0 +1,272 @@
+@media screen and (max-width: 1150px) {
+
+    .works {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 80vw;
+        align-items: center;
+
+        .mywork {
+            min-width: 68vw;
+        }
+
+    }
+
+    .welcome {
+    
+        .upper {
+            flex-direction: column;
+        }
+    
+        .profile-pic{
+            margin-left: 0vw;
+            margin-bottom: 10vh;
+    
+            img {
+                height: 105%;
+            }
+        }
+
+        .info {
+            margin-right: 0vw;
+            margin-left: 0vw;
+        }
+    }
+
+
+}
+
+@media screen and (max-width: 870px) {
+
+    .bg {
+        font-size: 30vh;
+        top: -6vw;
+        left: -10vw;
+        font-weight: 600;
+        z-index: 0;
+    }
+
+    .experience{
+
+        .experience-grid {
+                .info {
+                    width: 6vw;
+                }
+        }
+
+    }
+
+    .contact {
+        .c-right {
+            height: auto;
+            flex: none;
+            padding-left: 10.2vw;
+    
+            >p {
+                margin-top: -5vh;
+            }
+    
+            .social-box {
+                width: 30vw;
+    
+                .text {
+                    width: 96%;
+                    margin-left: 0%;
+                    justify-content: center;
+    
+                    p {
+                        margin-left: 2.2vw;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 760px){
+
+    .welcome {
+        header{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(black,0.2);
+            .menu-button {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+
+                i{
+                    margin-bottom: -0.6vh;
+                    font-size: 1.8vh;
+                }
+
+                .i-flip {
+                    margin-bottom: -4.6vh;
+                    transform: scaleY(-1);
+                    margin-top: 1vh;
+                }
+            }
+
+            >i{
+                display: none;
+                margin-top: 10vh;
+                font-size: 3vh;
+                color: white;
+                cursor: pointer;
+            }
+
+            >a {
+                font-size: 2.6vh;
+                font-weight: 600;
+                display: none;
+                margin: 4vh;
+            }
+
+            .js-socials {
+                position: relative;
+                right: 0vw;
+                display: none;
+                margin-top: 4vh;
+            }
+        }
+
+        .header-menu {
+            z-index: 4;
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background-color: #404040;
+        }
+    }
+
+    .experience{
+
+        .experience-grid {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(6,13vh);
+            .info {
+                margin-right: 4vw;
+            }
+        }
+
+        .xp-card{
+            .percentage-box {
+                margin: 0vh 4vw;
+            }
+        }
+
+        .probably {
+            max-width: 80vw;
+        }
+    }
+
+    .about {
+        .about-text {
+            width: 70vw;
+            font-size: 2.3vh;
+        }
+        padding-bottom: 25vh;
+    }
+
+    .work {
+        .categories {
+            width: 90vw;
+    
+            .cat-1 {
+                font-size: 1.8vh;
+                font-weight: 500;
+            }
+    
+        }
+
+        >p {
+            &:nth-of-type(3) {
+                max-width: 70%;
+                text-align: center;
+            }
+        }
+
+        .divider-hr {
+            width: 15vw;
+        }
+    }
+
+    .contact{
+
+        .both-sides {
+            flex-direction: column;
+        }
+
+        .c-left {
+
+            border-right: none;
+            border-bottom: 1px solid #707070;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding-bottom: 6vh;
+
+            .question {
+                
+            font-size: 1.9vh;
+            }
+    
+            .cta-text {
+                font-size: 2.6vh;
+            }
+        }
+
+        .c-right {
+            height: auto;
+            flex: none;
+            padding-left: 0vw;
+    
+            >p {
+                margin-top: 6vh;
+            }
+    
+            .social-box {
+                width: 40vw;
+    
+                .text {
+                    width: 96%;
+                    margin-left: 0%;
+                    justify-content: center;
+    
+                    p {
+                        margin-left: 2.2vw;
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 660px) {
+
+    h2 {
+        align-self: center;
+        margin-left: 0vw;
+        margin-top: 20vh;
+        z-index: 1;
+    }
+
+    .experience{
+
+        .experience-grid {
+                .info {
+                    width: 8vw;
+                }
+        }
+    }
+
+}
