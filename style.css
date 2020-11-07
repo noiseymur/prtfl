@@ -1047,6 +1047,17 @@ h2 {
   cursor: pointer;
 }
 
+.modal-det .modal-content .quote .h2 {
+  font-size: 2.5vh;
+  padding-bottom: 2vh;
+  border-bottom: 1px solid #000000;
+}
+
+.modal-det .modal-content .quote .p {
+  font-size: 1vh;
+  float: left;
+ }
+
 .modal-det .modal-content .exp-container {
   display: -ms-grid;
   display: grid;
