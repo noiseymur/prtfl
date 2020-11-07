@@ -1047,6 +1047,16 @@ h2 {
   cursor: pointer;
 }
 
+.modal-det .modal-content .quote {
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .modal-det .modal-content .quote h2 {
   font-size: 4vh;
   padding-bottom: 3.5vh;
