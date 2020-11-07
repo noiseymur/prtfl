@@ -1048,14 +1048,14 @@ h2 {
 }
 
 .modal-det .modal-content .quote h2 {
-  font-size: 2.5vh;
-  padding-bottom: 2vh;
+  font-size: 4vh;
+  padding-bottom: 3.5vh;
   border-bottom: 1px solid #000000;
   font-family: 'DM Serif Display', serif;
 }
 
 .modal-det .modal-content .quote p {
-  font-size: 1.2vh;
+  font-size: 2vh;
   float: right;
   font-family: 'DM Serif Display', serif;
   font-style: italic;
