@@ -1055,8 +1055,8 @@ h2 {
 }
 
 .modal-det .modal-content .quote .p {
-  font-size: 1vh;
-  float: left;
+  font-size: 1.2vh;
+  float: right;
   font-family: 'DM Serif Display', serif;
   font-style: italic;
  }
